@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-27 01:52:45 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjAxOjQyOjM4ICI7MzYzNA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjAxOjUyOjQ1ICI7MjszNzQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="D&#233;claration"/>
+            <declare name="justePrix, proposition" type="Integer" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur d'entrer le juste prix"/>
+            <output expression="&quot;Entrez le juste prix : &quot;" newline="True"/>
+            <input variable="justePrix"/>
+            <output expression="&quot;Entrez une proposition : &quot;" newline="True"/>
+            <input variable="proposition"/>
+            <while expression="justePrix != proposition">
+                <if expression="proposition &lt; justePrix">
+                    <then>
+                        <output expression="&quot;C'est plus&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;C'est moins&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Entrez une proposition : &quot;" newline="True"/>
+                <input variable="proposition"/>
+            </while>
+            <output expression="&quot;C'est gagn&#233;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

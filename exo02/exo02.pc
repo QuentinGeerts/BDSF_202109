@@ -1,0 +1,19 @@
+// exo02-Récupérez le nom et le prénom de 
+// l'utilisateur puis affichez le message 
+// "Bienvenue prenom nom"
+// Ex : Bienvenue Jules César
+Algorithme exo02
+DEBUT
+    // Déclaration des variables chaine de caractères
+    Variable nom, prenom : Chaine
+
+    // Demander à l'utilisateur d'entrer son nom et son prénom
+    Ecrire("Entrez votre nom : ")
+    Lire(nom)
+
+    Ecrire("Entrez votre prénom : ")
+    Lire(prenom)
+
+    // Afficher le message de bienvenue suivi du prénom et du nom séparé par des espaces
+    Ecrire("Bienvenue" & " " & prenom & " " & nom)
+FIN

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-27 11:04:19 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjEwOjIyOjIxICI7MzYyNA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjExOjA0OjE5ICI7MTU7Mzc5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Reprenez l&#8217;algorithme du lanceur de balles de tennis et faites en sorte qu&#8217;il lance une balle tant que le stock n&#8217;est pas vide Il y a donc 2 variables stockBalles et pret"/>
+            <comment text="D&#233;claration"/>
+            <declare name="pret" type="Boolean" array="False" size=""/>
+            <declare name="stockBalles" type="Integer" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur le stock de balles"/>
+            <output expression="&quot;Combien de balles avez-vous ?&quot;" newline="True"/>
+            <input variable="stockBalles"/>
+            <comment text="Tant qu'il y a des balles dans le panier, on lance"/>
+            <while expression="stockBalles &gt; 0">
+                <comment text="Demander &#224; l'utilisateur s'il est pr&#234;t pour lancer la balle"/>
+                <output expression="&quot;Il reste &quot; &amp; stockBalles &amp; &quot; balle(s) &#224; lancer.&quot;" newline="True"/>
+                <output expression="&quot;&#202;tes-vous pr&#234;t ? true / false&quot;" newline="True"/>
+                <input variable="pret"/>
+                <if expression="pret">
+                    <then>
+                        <output expression="&quot;Lancer la balle&quot;" newline="True"/>
+                        <assign variable="stockBalles" expression="stockBalles - 1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Ne pas lancer la balle&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Il n'y a plus de balles, partie termin&#233;e&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

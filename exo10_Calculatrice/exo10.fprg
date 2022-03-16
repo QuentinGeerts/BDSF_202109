@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-24 12:18:41 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjEwOjE4OjUxICI7MzYyOQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjEyOjE4OjQxICI7NTszNzQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo10 Calculatrice&#13;&#10;R&#233;alisez l&#8217;algorithme d&#8217;une calculatrice basique. L&#8217;utilisateur est invit&#233; &#224; saisir un nombre, un op&#233;rateur et un deuxi&#232;me nombre. La calculatrice affiche ensuite le calcul et le r&#233;sultat. &#13;&#10;(G&#233;rer la division par 0)"/>
+            <declare name="nb1, nb2, result" type="Real" array="False" size=""/>
+            <declare name="operator" type="String" array="False" size=""/>
+            <output expression="&quot;Entrez une premier nombre : &quot;" newline="True"/>
+            <input variable="nb1"/>
+            <output expression="&quot;Entrez l'op&#233;rateur (+, -, *, /, //) : &quot;" newline="True"/>
+            <input variable="operator"/>
+            <output expression="&quot;Entrez une deuxi&#232;me nombre : &quot;" newline="True"/>
+            <input variable="nb2"/>
+            <if expression="operator == &quot;+&quot; or operator == &quot;-&quot; or operator == &quot;*&quot; or operator == &quot;/&quot; or operator == &quot;//&quot;">
+                <then>
+                    <if expression="operator == &quot;+&quot;">
+                        <then>
+                            <comment text="Addition"/>
+                            <assign variable="result" expression="nb1 + nb2"/>
+                        </then>
+                        <else>
+                            <comment text="-, *, /"/>
+                            <if expression="operator == &quot;-&quot;">
+                                <then>
+                                    <comment text="Soustraction&#13;&#10;"/>
+                                    <assign variable="result" expression="nb1 - nb2"/>
+                                </then>
+                                <else>
+                                    <comment text="*, /"/>
+                                    <if expression="operator == &quot;*&quot;">
+                                        <then>
+                                            <comment text="Multiplication"/>
+                                            <assign variable="result" expression="nb1 * nb2"/>
+                                        </then>
+                                        <else>
+                                            <comment text="/"/>
+                                            <if expression="operator == &quot;/&quot;">
+                                                <then>
+                                                    <if expression="nb2 != 0">
+                                                        <then>
+                                                            <assign variable="result" expression="nb1 / nb2"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <if expression="operator == &quot;//&quot;">
+                                                        <then>
+                                                            <comment text="Division enti&#232;re"/>
+                                                            <if expression="nb2 != 0">
+                                                                <then>
+                                                                    <assign variable="result" expression="nb1 / nb2"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <comment text="Affichage"/>
+                    <if expression="operator == &quot;/&quot; or operator == &quot;//&quot; and nb2 == 0">
+                        <then>
+                            <output expression="&quot;Division par 0 impossible&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="nb1 &amp; &quot; &quot; &amp; operator &amp; &quot; &quot; &amp; nb2 &amp; &quot; = &quot; &amp; result" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;L'op&#233;rateur que vous avez entr&#233; est incorrect&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

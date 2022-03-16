@@ -1,0 +1,17 @@
+// exo00 - Stockez dans une variable nommée message la chaine de caractères "Bienvenue" et affichez son contenu à l'écran
+
+Algorithme exo00
+DEBUT
+    // Déclaration de ma variable message
+    // Réservation en mémoire d'un emplacement pour accueillir la valeur de message
+    Variable message : Chaine
+
+    // Affectation de la valeur "Bienvenue" dans la variable message
+    // (Initialisation)
+    // Insérer la valeur 'Bienvenue' dans l'emplacement mémoire
+    message <- "Bienvenue"
+
+    // Affichage du contenu de la variable
+    // dans la console
+    Ecrire(message)
+FIN

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-20 01:24:19 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjA5OjE5OjQ2ICI7MzYzOA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjAxOjI0OjE5ICI7MTszNzM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="D&#233;claration des variables"/>
+            <declare name="prenom, nom" type="String" array="False" size=""/>
+            <assign variable="prenom" expression="&quot;Quentin&quot;"/>
+            <assign variable="nom" expression="&quot;Geerts&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

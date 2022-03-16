@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-27 11:51:25 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjEwOjMwOjUyICI7MzYyNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjExOjUxOjI1ICI7NTszNzQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 15 &#192; l&#8217;aide de deux boucles, affichez les tables de multiplication de 1 &#224; 9"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <comment text="table -&gt; 1 -&gt; 9"/>
+            <declare name="table" type="Integer" array="False" size=""/>
+            <comment text="Initialisation 1"/>
+            <assign variable="table" expression="1"/>
+            <comment text="Condition 1"/>
+            <while expression="table &lt;= 9">
+                <output expression="&quot;La table de &quot; &amp; table" newline="True"/>
+                <comment text="nombre -&gt; 1 -&gt; 10"/>
+                <comment text="Initialisation 2"/>
+                <assign variable="number" expression="1"/>
+                <comment text="Condition 2"/>
+                <while expression="number &lt;= 10">
+                    <output expression="number &amp; &quot; * &quot; &amp; table &amp; &quot; = &quot; &amp; number * table" newline="True"/>
+                    <comment text="Incr&#233;mentation 2"/>
+                    <assign variable="number" expression="number + 1"/>
+                </while>
+                <comment text="Incr&#233;mentation 1"/>
+                <assign variable="table" expression="table + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

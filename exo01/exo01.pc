@@ -1,0 +1,20 @@
+Algorithme exo01
+DEBUT
+    // Déclaration des variables entières
+    Variable nb1, nb2, temp : Entier
+
+    // Affectation
+    nb1 <- 5
+    nb2 <- 7
+
+    // Affichage AVANT
+    Ecrire("La valeur de nb1 : " & nb1 & " et la valeur de nb2 : " & nb2)
+
+    // Traitement
+    temp <- nb1
+    nb1 <- nb2
+    nb2 <- temp
+
+    // Affichage APRÈS
+    Ecrire("La valeur de nb1 : " & nb1 & " et la valeur de nb2 : " & nb2)
+FIN

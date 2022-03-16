@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-20 05:33:35 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjAxOjI0OjIyICI7MzYyMA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjA1OjMzOjM1ICI7MzszNzM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo00 - Stockez dans une variable nomm&#233;e message la chaine de caract&#232;res &quot;Bienvenue&quot; et affichez son contenu &#224; l'&#233;cran&#13;&#10;"/>
+            <comment text="D&#233;claration de la variable message"/>
+            <declare name="message" type="String" array="False" size=""/>
+            <comment text="Affectation de la valeur &quot;Bienvenue&quot; &#224; la variable message"/>
+            <assign variable="message" expression="&quot;Bienvenue&quot;"/>
+            <comment text="Affichage du contenu de la variable message"/>
+            <output expression="message" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

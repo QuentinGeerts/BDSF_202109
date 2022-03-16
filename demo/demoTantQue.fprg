@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-24 04:33:18 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjA0OjE5OjA0ICI7MzYzMQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjA0OjMzOjE4ICI7MTszNzQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="isFinished" type="Boolean" array="False" size=""/>
+            <assign variable="isFinished" expression="false"/>
+            <assign variable="i" expression="0"/>
+            <while expression="!isFinished">
+                <output expression="i" newline="True"/>
+                <if expression="i == 50">
+                    <then>
+                        <assign variable="isFinished" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,62 @@
+// exo10 Calculatrice (Pseudo Code + Python)
+// Réalisez l’algorithme d’une calculatrice basique. 
+// L’utilisateur est invité à saisir un nombre, un opérateur et un deuxième nombre. 
+// La calculatrice affiche ensuite le calcul et le résultat. 
+// (Gérer la division par 0)
+
+Algorithme Calculatrice
+DEBUT
+    Variable nb1, nb2, result : Reel
+    Variable operator : Chaine
+
+    Ecrire("Entrez un premier nombre : ")
+    Lire(nb1)
+
+    Ecrire("Entrez un opérateur : ")
+    Lire(operator)
+
+    Ecrire("Entrez un deuxième nombre : ")
+    Lire(nb1)
+
+    SI 
+        operator == "+" OU 
+        operator == "-" OU
+        operator == "*" OU 
+        operator == "/" OU 
+        operator == "//" ALORS
+        
+        Ecrire("Opérateur reconnu.")
+
+        SI operator == "+" ALORS
+            // Addition
+            result = nb1 + nb2
+        SINONSI operator == "-" ALORS
+            // Soustraction
+            result = nb1 - nb2
+        SINONSI operator == "*" ALORS
+            // Multiplication
+            result = nb1 * nb2
+        SINONSI operator == "/" ALORS
+            // Division
+            SI nb2 != 0:
+                result = nb1 / nb2
+            FINSI
+        SINONSI operator == "//" ALORS
+            // Division entère
+            SI nb2 != 0:
+                result = nb1 DIV nb2
+            FINSI
+        FINSI
+
+        SI operator == "/" OU operator == "//" ET nb2 == 0 ALORS
+            Ecrire("Division par 0 impossible")
+        SINON
+            Ecrire(nb1 & " " & operator & " " & nb2 & " = " & result)
+        FINSI
+        
+
+    SINON
+        Ecrire("Opérateur non reconnu.")
+    FINSI
+    
+FIN

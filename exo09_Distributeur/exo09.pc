@@ -1,0 +1,53 @@
+// exo09 Distributeur de boissons (Pseudo Code + Python)
+// Réalisez l’algorithme d’un distributeur de boissons. 
+// Ce dernier propose plusieurs boissons et l’utilisateur 
+// choisit celle qu’il  désire en entrant le numéro correspondant. 
+// N'oubliez pas de vérifier s’il y a encore des boissons en stock.
+
+Algorithme Distributeur
+DEBUT
+    // Initialisation du stock de boisson
+    Variable stockEau, stockCoca, stockFanta : Entier
+    stockEau = 2
+    stockCoca = 0
+    stockFanta = 1
+
+    // Proposition des boissons
+    Ecrire("1. Eau, 2. Coca, 3. Fanta")
+
+    // Récupération du choix de l'utilisateur
+    Variable choix : Entier
+    Ecrire("Choix :")
+    Lire(choix)
+
+    // Vérification du choix de l'utilisateur
+    SI choix >= 1 ET choix <= 3 ALORS
+        // Choix connu
+        Ecrire("Choix connu")
+
+        /// Vérification du choix de la boisson
+        SI choix == 1 ET stockEau > 0 ALORS
+            // Eau
+            // Vérification du stock de la boisson
+            // "Achat possible"
+            // Décrémentation du stock de la boisson + remerciement
+            stockEau = stockEau - 1
+            Ecrire("Merci pour votre achat")
+
+        SINONSI choix == 2 and stockCoca > 0 ALORS
+            stockCoca = stockCoca - 1
+            Ecrire("Merci pour votre achat")
+            
+        SINONSI choix == 3 and stockFanta > 0 ALORS
+            stockFanta = stockFanta - 1
+            Ecrire("Merci pour votre achat")
+        
+        SINON
+            Ecrire("Hors stock")
+        
+        FINSI
+    SINON
+        // Choix inconnu
+        Ecrire("Choix inconnu")
+    FINSI
+FIN

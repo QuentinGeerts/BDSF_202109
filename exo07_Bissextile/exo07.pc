@@ -1,0 +1,18 @@
+Algorithme Bissextile
+DEBUT
+    Variable year : Entier
+
+    Ecrire("Entrez une année à évaluer : ")
+    Lire(year)
+
+    SI 
+        year % 4 == 0 and 
+        year % 100 != 0 or 
+        year % 400 == 0 
+    ALORS
+        Ecrire("Année " & year & " est bissextile")
+    SINON
+        Ecrire("Année " & year & " n'est pas bissextile")    
+    FINSI
+    
+FIN

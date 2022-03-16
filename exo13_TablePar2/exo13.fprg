@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-27 10:22:17 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjA5OjI2OjEzICI7MzYzNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjc7IjEwOjIyOjE3ICI7NTszNzQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 13 - &#192; l&#8217;aide d&#8217;une boucle, affichez la table de multiplication par 2"/>
+            <comment text="D&#233;claration"/>
+            <declare name="compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="1"/>
+            <while expression="compteur &lt;= 10">
+                <output expression="compteur &amp; &quot; * 2  = &quot; &amp; compteur * 2" newline="True"/>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

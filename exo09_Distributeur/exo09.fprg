@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-21 04:39:19 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjE7IjA0OjEwOjAwICI7MzYxNQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjE7IjA0OjM5OjE5ICI7MzszNzQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo09-Distributeur de boissons (Pseudo-Code + Python)&#13;&#10;R&#233;alisez l&#8217;algorithme d&#8217;un distributeur de boissons. Ce dernier propose plusieurs boissons et l&#8217;utilisateur choisit celle qu&#8217;il d&#233;sire en entrant le num&#233;ro correspondant. N'oubliez pas de v&#233;rifier s&#8217;il y a encore des boissons en stock"/>
+            <comment text="Initialisation du stock de boisson"/>
+            <declare name="stockEau, stockCoca, stockFanta" type="Integer" array="False" size=""/>
+            <assign variable="stockEau" expression="2"/>
+            <assign variable="stockCoca" expression="0"/>
+            <assign variable="stockFanta" expression="1"/>
+            <comment text="Proposition des boissons"/>
+            <output expression="&quot;1. Eau, 2. Coca, 3. Fanta&quot;" newline="True"/>
+            <comment text="R&#233;cup&#233;ration du choix de l'utilisateur"/>
+            <declare name="choix" type="Integer" array="False" size=""/>
+            <output expression="&quot;Choix : &quot;" newline="True"/>
+            <input variable="choix"/>
+            <comment text="V&#233;rification du choix de l'utilisateur"/>
+            <if expression="choix &gt;= 1 and choix &lt;= 3">
+                <then>
+                    <comment text="Choix Connu"/>
+                    <output expression="&quot;Choix connu&quot;" newline="True"/>
+                    <comment text="/// V&#233;rification du choix de la boisson"/>
+                    <if expression="choix == 1 and stockEau &gt; 0">
+                        <then>
+                            <comment text="Eau"/>
+                            <comment text="//// V&#233;rification du stock de la boisson"/>
+                            <comment text="&quot;Achat possible&quot;"/>
+                            <comment text="///// D&#233;cr&#233;mentation du stock de la boisson + remerciement"/>
+                            <assign variable="stockEau" expression="stockEau - 1"/>
+                            <output expression="&quot;Merci pour votre achat&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="Coca, fanta"/>
+                            <if expression="choix == 2 and stockCoca &gt; 0">
+                                <then>
+                                    <comment text="Coca"/>
+                                    <assign variable="stockCoca" expression="stockCoca- 1"/>
+                                    <output expression="&quot;Merci pour votre achat&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="choix == 3 and stockFanta &gt; 0">
+                                        <then>
+                                            <comment text="fanta"/>
+                                            <assign variable="stockFanta" expression="stockFanta - 1"/>
+                                            <output expression="&quot;Merci pour votre achat&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Hors stock&quot;" newline="False"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Choix Inconnu"/>
+                    <output expression="&quot;Choix inconnu&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

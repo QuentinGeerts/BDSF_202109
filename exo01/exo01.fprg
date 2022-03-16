@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-20 05:35:21 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjAxOjU4OjAzICI7MzYyNg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjA7IjA1OjM1OjIxICI7NjszNzM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo01-Trouvez une m&#233;thode permettant d&#8217;inverser le contenu de deux variables (du m&#234;me type &#233;videmment). Si nb1 = 5 et nb2 = 7, apr&#232;s ce traitement, nb1 = 7 et nb2 = 5."/>
+            <comment text="D&#233;claration des variables : nb1, nb2 et temp"/>
+            <comment text="temp &#233;tant notre variable temporaire qui accueillera la valeur se faisant &#233;craser de nb1 par nb2 dans le traitement"/>
+            <declare name="nb1, nb2, temp" type="Integer" array="False" size=""/>
+            <comment text="Affectation des diff&#233;rentes valeurs nb1 et nb2"/>
+            <assign variable="nb1" expression="5"/>
+            <assign variable="nb2" expression="7"/>
+            <comment text="Affichage AVANT traitement"/>
+            <output expression="&quot;La valeur de nb1 : &quot; &amp; nb1 &amp; &quot; et la valeur de nb2 : &quot; &amp; nb2" newline="True"/>
+            <comment text="Traitement"/>
+            <assign variable="temp" expression="nb1"/>
+            <assign variable="nb1" expression="nb2"/>
+            <assign variable="nb2" expression="temp"/>
+            <comment text="Affichage APR&#200;S traitement"/>
+            <output expression="&quot;La valeur de nb1 : &quot; &amp; nb1 &amp; &quot; et la valeur de nb2 : &quot; &amp; nb2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

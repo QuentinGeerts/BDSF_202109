@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-24 04:18:11 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjAyOjE3OjMxICI7MzYyNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjQ7IjA0OjE4OjExICI7NTszNzQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 12 R&#233;alisez un algorithme utilisant le convertisseur de secondes, il re&#231;oit deux dur&#233;es en jours, heures, minutes et secondes puis il calcule la diff&#233;rence entre ces derni&#232;res"/>
+            <declare name="SECINDAY, SECINHOUR, SECINMINUTE" type="Integer" array="False" size=""/>
+            <assign variable="SECINDAY" expression="86400"/>
+            <assign variable="SECINHOUR" expression="3600"/>
+            <assign variable="SECINMINUTE" expression="60"/>
+            <declare name="j1, h1, m1, s1, t1" type="Integer" array="False" size=""/>
+            <declare name="j2, h2, m2, s2, t2" type="Integer" array="False" size=""/>
+            <declare name="jT, hT, mT, sT, tT" type="Integer" array="False" size=""/>
+            <comment text="Dur&#233;e 1"/>
+            <output expression="&quot;Entrez la premi&#232;re dur&#233;e : Jour&quot;" newline="True"/>
+            <input variable="j1"/>
+            <output expression="&quot;Entrez la premi&#232;re dur&#233;e : Heure&quot;" newline="True"/>
+            <input variable="h1"/>
+            <output expression="&quot;Entrez la premi&#232;re dur&#233;e : Minute&quot;" newline="True"/>
+            <input variable="m1"/>
+            <output expression="&quot;Entrez la premi&#232;re dur&#233;e : Seconde&quot;" newline="True"/>
+            <input variable="s1"/>
+            <comment text="Dur&#233;e 2"/>
+            <output expression="&quot;Entrez la deuxi&#232;me dur&#233;e : Jour&quot;" newline="True"/>
+            <input variable="j2"/>
+            <output expression="&quot;Entrez la deuxi&#232;me dur&#233;e : Heure&quot;" newline="True"/>
+            <input variable="h2"/>
+            <output expression="&quot;Entrez la deuxi&#232;me dur&#233;e : Minute&quot;" newline="True"/>
+            <input variable="m2"/>
+            <output expression="&quot;Entrez la deuxi&#232;me dur&#233;e : Seconde&quot;" newline="True"/>
+            <input variable="s2"/>
+            <comment text="Convertir la dur&#233;e en secondes"/>
+            <assign variable="t1" expression="j1 * SECINDAY + h1 * SECINHOUR + m1 * SECINMINUTE + s1"/>
+            <assign variable="t2" expression="j2 * SECINDAY + h2 * SECINHOUR + m2 * SECINMINUTE + s2"/>
+            <comment text="Diff&#233;rence entre les deux dur&#233;es"/>
+            <if expression="t1 &gt; t2">
+                <then>
+                    <assign variable="tT" expression="t1 - t2"/>
+                </then>
+                <else>
+                    <assign variable="tT" expression="t2 - t1"/>
+                </else>
+            </if>
+            <comment text="Reconvertir les secondes en dur&#233;e"/>
+            <assign variable="jT" expression="tT / SECINDAY"/>
+            <assign variable="hT" expression="(tT % SECINDAY) / SECINHOUR"/>
+            <assign variable="mT" expression="((tT % SECINDAY) % SECINHOUR) / SECINMINUTE"/>
+            <assign variable="sT" expression="((tT % SECINDAY) % SECINHOUR) % SECINMINUTE"/>
+            <comment text="Affichage&#13;&#10;"/>
+            <output expression="&quot;La dur&#233;e 1 : &quot; &amp; j1 &amp; &quot;:&quot; &amp; h1 &amp; &quot;:&quot; &amp; m1 &amp; &quot;:&quot; &amp; s1" newline="True"/>
+            <output expression="&quot;La dur&#233;e 2 : &quot; &amp; j2 &amp; &quot;:&quot; &amp; h2 &amp; &quot;:&quot; &amp; m2 &amp; &quot;:&quot; &amp; s2" newline="True"/>
+            <output expression="&quot;La diff&#233;rence entre les deux dur&#233;es est de : &quot; &amp; jT &amp; &quot;:&quot; &amp; hT &amp; &quot;:&quot; &amp; mT &amp; &quot;:&quot; &amp; sT" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

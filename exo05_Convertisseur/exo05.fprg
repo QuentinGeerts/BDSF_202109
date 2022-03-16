@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-21 10:02:17 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjE7IjA5OjEyOjI5ICI7MzYzMw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjEtMDktMjE7IjEwOjAyOjE3ICI7MjszNzMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="D&#233;claration des constantes&#13;&#10;"/>
+            <declare name="SECINDAY, SECINHOUR, SECINMINUTE" type="Integer" array="False" size=""/>
+            <assign variable="SECINDAY" expression="86400"/>
+            <assign variable="SECINHOUR" expression="3600"/>
+            <assign variable="SECINMINUTE" expression="60"/>
+            <comment text="D&#233;claration des variables"/>
+            <declare name="secondsToConvert" type="Integer" array="False" size=""/>
+            <declare name="day, hour, minute, second" type="Integer" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur de rentrer un nombre de secondes &#224; convertir"/>
+            <output expression="&quot;Entrez un nombre de secondes &#224; convertir en J:H:M:S&quot;" newline="True"/>
+            <input variable="secondsToConvert"/>
+            <comment text="Conversion"/>
+            <assign variable="day" expression="secondsToConvert / SECINDAY"/>
+            <assign variable="hour" expression="(secondsToConvert % SECINDAY) / SECINHOUR"/>
+            <assign variable="minute" expression="((secondsToConvert % SECINDAY) % SECINHOUR) / SECINMINUTE"/>
+            <assign variable="second" expression="((secondsToConvert % SECINDAY) % SECINHOUR) % SECINMINUTE"/>
+            <comment text="Affichage"/>
+            <output expression="secondsToConvert &amp; &quot; secondes vaut &quot; &amp; day &amp; &quot; jour(s) &quot; &amp; hour &amp; &quot; heure(s) &quot; &amp; minute &amp; &quot; minute(s) &quot; &amp; second &amp; &quot; seconde(s).&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

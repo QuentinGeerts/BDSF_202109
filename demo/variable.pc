@@ -1,0 +1,23 @@
+Algorithme demoVariables
+DEBUT
+    /*
+    Ceci
+    est
+    un
+    commentaire
+    multi-ligne
+    */
+
+    // Ceci est un commentaire
+
+    // Déclaration des variables
+    Variable prenom1, nom1 : Chaine
+    Variable prenom2, nom2 : Chaine
+    Variable nombre_enfant : Entier
+
+    Constante MAX_ENFANTS = valeurConstante
+
+    prenom1 <- "Quentin"
+    nom1 <- "Geerts"
+        
+FIN
